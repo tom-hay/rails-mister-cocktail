@@ -10,3 +10,8 @@ Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
 Cocktail.create(name: "Mojito")
+Cocktail.create(name: "Cuba Libre")
+Cocktail.create(name: "Pina Colada")
+Cocktail.create(name: "Strawberry Daquiri")
+Cocktail.create(name: "White Russian")
+Cocktail.create(name: "Moscow Mule")

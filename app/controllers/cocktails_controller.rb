@@ -10,41 +10,40 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
-      # do something else
       render :new
     end
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def update
-    @cocktail.update(cocktail_params)
+  # def update
+  #   # @cocktail.update(cocktail_params)
 
-    redirect_to cocktail_path(@cocktail)
-  end
+  #   # redirect_to cocktail_path(@cocktail)
+  # end
 
   def show
-    @reviews = @cocktail.reviews
+     @cocktail = Cocktail.find(params[:id])
   end
 
-  def destroy
-    @cocktail.destroy
+  # def destroy
+  #   # @cocktail.destroy
 
-    redirect_to cocktails_path
-  end
+  #   # redirect_to cocktails_path
+  # end
 
-  private
+  # private
 
-  def set_cocktail
-    @cocktail = Cocktail.find(params[:id])
-  end
+#   def set_cocktail
+#     @cocktail = Cocktail.find(params[:id])
+#   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :address, :stars)
+    params.require(:cocktail).permit(:name)
   end
+
 end

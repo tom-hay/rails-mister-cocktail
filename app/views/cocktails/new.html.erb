@@ -1,8 +1,7 @@
 <div class="card-container">
 
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
     <%= f.button :submit, class: "btn-primary" %>
     <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
   <% end %>

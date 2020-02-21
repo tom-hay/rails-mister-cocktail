@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= @cocktail.name %></h5>
+    <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %></li>
+      <li><%= dose.description %></li>
+      <% end %>
+    </ul>
+   <!--  <p class="card-text"><%= @cocktail.dose.description %></p>
+    <p class="card-text"><%= @dose.ingredient %></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
